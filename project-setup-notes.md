@@ -37,3 +37,28 @@ Access Logs:
 
 Error Logs:
 /var/log/nginx/error.log
+
+# Node Exporter Setup
+
+## Purpose
+
+Collect Linux system metrics for Prometheus.
+
+## Installed Version
+
+v1.9.1
+
+## Metrics Endpoint
+
+http://SERVER_IP:9100/metrics
+
+## Important Commands
+
+Start Service:
+sudo systemctl start node_exporter
+
+Check Status:
+sudo systemctl status node_exporter
+
+View Metrics:
+curl localhost:9100/metrics
