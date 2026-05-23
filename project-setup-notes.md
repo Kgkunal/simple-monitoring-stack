@@ -89,3 +89,30 @@ sudo systemctl status prometheus
 
 Restart:
 sudo systemctl restart prometheus
+
+# Grafana Setup
+
+## Installed Version
+
+Grafana Enterprise 12.0.1
+
+## Dashboard URL
+
+http://SERVER_IP:3000
+
+## Default Dashboard
+
+Node Exporter Full
+Dashboard ID: 1860
+
+## Connected Data Source
+
+Prometheus
+
+## Important Commands
+
+Check Status:
+sudo systemctl status grafana-server
+
+Restart:
+sudo systemctl restart grafana-server
