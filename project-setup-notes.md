@@ -62,3 +62,30 @@ sudo systemctl status node_exporter
 
 View Metrics:
 curl localhost:9100/metrics
+
+# Prometheus Setup
+
+## Installed Version
+
+v3.4.1
+
+## Metrics UI
+
+http://SERVER_IP:9090
+
+## Config File
+
+/etc/prometheus/prometheus.yml
+
+## Monitored Targets
+
+- localhost:9090
+- localhost:9100
+
+## Important Commands
+
+Check Status:
+sudo systemctl status prometheus
+
+Restart:
+sudo systemctl restart prometheus
