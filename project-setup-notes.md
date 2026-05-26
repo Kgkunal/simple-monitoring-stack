@@ -116,3 +116,49 @@ sudo systemctl status grafana-server
 
 Restart:
 sudo systemctl restart grafana-server
+
+# Loki + Promtail Setup
+
+## Loki Port
+
+3100
+
+## Promtail Port
+
+9080
+
+## Log Source
+
+/var/log/nginx/*.log
+
+## Grafana Query
+
+{job="nginx_logs"}
+
+## Important Commands
+
+Check Loki:
+sudo systemctl status loki
+
+Check Promtail:
+sudo systemctl status promtail
+
+# Alertmanager Setup
+
+## Port
+
+9093
+
+## Config File
+
+/etc/alertmanager/alertmanager.yml
+
+## Alerts Created
+
+- HighCPUUsage
+- HighMemoryUsage
+- HostDown
+
+## Alert Test
+
+stress --cpu 2 --timeout 120
