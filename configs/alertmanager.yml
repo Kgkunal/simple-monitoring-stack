@@ -1,0 +1,17 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: 'kgkunalgavhane1721@gmail.com'
+  smtp_auth_username: 'kgkunalgavhane1721@gmail.com'
+  smtp_auth_password: 'YOUR_APP_PASSWORD'
+
+route:
+  receiver: 'email-alert'
+
+receivers:
+  - name: 'email-alert'
+    email_configs:
+      - to: 'kgkunalgavhane1721@gmail.com'
+        from: 'kgkunalgavhane1721@gmail.com'
+        smarthost: 'smtp.gmail.com:587'
+        auth_username: 'kgkunalgavhane1721@gmail.com'
+        auth_password: 'YOUR_APP_PASSWORD'
